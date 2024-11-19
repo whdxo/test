@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
-import 'theme/app_theme.dart';
-import 'utils/constants.dart';
+// import 'package:firebase_core/firebase_core.dart'; // Firebase 초기화 주석 처리
+// import 'firebase/firebase_options.dart'; // Firebase 설정 주석 처리
+import 'screens/welcome_screen.dart'; // WelcomeScreen import
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized(); // Flutter 엔진 초기화
+  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform); // Firebase 초기화 주석 처리
+
+  runApp(const MyApp()); // 앱 실행
 }
 
 class MyApp extends StatelessWidget {
@@ -13,9 +16,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: AppStrings.appName,
-      theme: AppTheme.lightTheme,
-      home: const HomeScreen(),
+      theme: ThemeData.light(),
+      home: const WelcomeScreen(), // WelcomeScreen을 홈 화면으로 설정
     );
   }
 }
