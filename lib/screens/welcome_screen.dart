@@ -140,34 +140,6 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              // 하단 바
-              Positioned(
-                left: 0,
-                bottom: 0,
-                child: Container(
-                  width: screenSize.width,
-                  height: screenSize.height * 0.042,
-                  padding: EdgeInsets.only(
-                    top: screenSize.height * 0.026,
-                    bottom: screenSize.height * 0.01,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        width: screenSize.width * 0.357,
-                        height: 5,
-                        decoration: ShapeDecoration(
-                          color: Colors.black,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(100),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
             ],
           ),
         ),
