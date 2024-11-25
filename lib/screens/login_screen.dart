@@ -11,4 +11,4 @@ class LoginScreen extends StatelessWidget {
       body: const Center(child: Text('로그인 화면')),
     );
   }
-} 
+}
